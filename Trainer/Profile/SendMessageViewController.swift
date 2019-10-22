@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class SendMessageViewController: UIViewController {
     
     /*
        // MARK: - Navigation
@@ -25,5 +25,12 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func sendEmail(_ sender: UIButton) {
+     
+         let  vc = (storyboard?.instantiateViewController(withIdentifier:StoryBoardIds.ThankuStoryboardID.rawValue))!
+                     self.navigationController?.pushViewController(vc,animated:true)
+        
+    }
+    
 }

@@ -29,13 +29,12 @@ class EventDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnTrainerProfile(_ sender: UIButton) {
-        
+    @IBAction func btnTrainerProfile(_ sender: Any) {
     }
     
     @IBAction func btnContact(_ sender: UIButton) {
         
-        let  vc = (storyboard?.instantiateViewController(withIdentifier:StoryBoardIds.ProfileStoryboardID.rawValue))!
+        let  vc = (storyboard?.instantiateViewController(withIdentifier:StoryBoardIds.SendMessageStoryboardID.rawValue))!
         self.navigationController?.pushViewController(vc,animated:true)
         
         
