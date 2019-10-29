@@ -26,10 +26,16 @@ class EventDetailViewController: UIViewController {
         
         super.viewDidLoad()
         
+        showOneButtonAlertView(title: "Trainer", message: "No Internet Connection")
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func btnTrainerProfile(_ sender: Any) {
+        
+        let vc = (storyboard?.instantiateViewController(withIdentifier:StoryBoardIds.ProfileID.rawValue))!
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @IBAction func btnContact(_ sender: UIButton) {

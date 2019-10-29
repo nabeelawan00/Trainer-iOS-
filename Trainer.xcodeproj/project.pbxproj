@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,9 +17,13 @@
 		04354DFB2338F4B8007EDE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04354DFA2338F4B8007EDE2F /* Assets.xcassets */; };
 		04354DFE2338F4B8007EDE2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04354DFC2338F4B8007EDE2F /* LaunchScreen.storyboard */; };
 		0435A35C233BF27F00F41B34 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435A35B233BF27F00F41B34 /* Enums.swift */; };
+		044329CC236809B500211E01 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044329CB236809B500211E01 /* File.swift */; };
+		0444FC5F2362D117008D1B8E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444FC5E2362D117008D1B8E /* Event.swift */; };
 		04685596233C848500E1334A /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685595233C848500E1334A /* EventListViewController.swift */; };
 		046E1B53234D1B68002FF1BC /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E1B52234D1B68002FF1BC /* EventDetailViewController.swift */; };
 		047602C623428EB30002EAA7 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047602C523428EB30002EAA7 /* EventTableViewCell.swift */; };
+		04885E38235F89C700335D8F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04885E37235F89C700335D8F /* ProfileViewController.swift */; };
+		08D8644C1D7E270BA945FDC8 /* Pods_Trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB66CB2FFC27A015CB3E6A6 /* Pods_Trainer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +39,16 @@
 		04354DFD2338F4B8007EDE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04354DFF2338F4B8007EDE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0435A35B233BF27F00F41B34 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		044329CB236809B500211E01 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		0444FC5E2362D117008D1B8E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		04685595233C848500E1334A /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		046E1B52234D1B68002FF1BC /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		047602C523428EB30002EAA7 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		04885E37235F89C700335D8F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		04A738472366C01C00188A3B /* Trainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trainer.entitlements; sourceTree = "<group>"; };
+		5AB66CB2FFC27A015CB3E6A6 /* Pods_Trainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		881AFD61B46EC870518BBDD8 /* Pods-Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainer.debug.xcconfig"; path = "Target Support Files/Pods-Trainer/Pods-Trainer.debug.xcconfig"; sourceTree = "<group>"; };
+		FD7D820E4037147AC6AD775E /* Pods-Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainer.release.xcconfig"; path = "Target Support Files/Pods-Trainer/Pods-Trainer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D8644C1D7E270BA945FDC8 /* Pods_Trainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +71,12 @@
 			path = "Event Detail";
 			sourceTree = "<group>";
 		};
-		0406C737235E1D9F007C5030 /* Profile */ = {
+		0406C737235E1D9F007C5030 /* SendMessageController */ = {
 			isa = PBXGroup;
 			children = (
 				0406C738235E1E6A007C5030 /* SendMessageViewController.swift */,
 			);
-			path = Profile;
+			path = SendMessageController;
 			sourceTree = "<group>";
 		};
 		0406C73A235E1E9A007C5030 /* MainController */ = {
@@ -97,6 +109,8 @@
 			children = (
 				04354DF02338F4B5007EDE2F /* Trainer */,
 				04354DEF2338F4B5007EDE2F /* Products */,
+				AA31D2DAE0F66D476BE06024 /* Pods */,
+				C89EDE397CD4E8B9A619AF4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,9 +125,13 @@
 		04354DF02338F4B5007EDE2F /* Trainer */ = {
 			isa = PBXGroup;
 			children = (
+				04A738472366C01C00188A3B /* Trainer.entitlements */,
+				044329CA2368098900211E01 /* webService */,
+				0444FC5D2362D0F8008D1B8E /* Models */,
+				04885E36235F89A900335D8F /* TrainerProfile */,
 				0406C73B235ED8CC007C5030 /* Thank Controller */,
 				0406C73A235E1E9A007C5030 /* MainController */,
-				0406C737235E1D9F007C5030 /* Profile */,
+				0406C737235E1D9F007C5030 /* SendMessageController */,
 				0406C736235E1D09007C5030 /* Event Detail */,
 				047602C423428E800002EAA7 /* Event List */,
 				041ABEA8233A9A2700135F6F /* Extensions */,
@@ -127,6 +145,22 @@
 			path = Trainer;
 			sourceTree = "<group>";
 		};
+		044329CA2368098900211E01 /* webService */ = {
+			isa = PBXGroup;
+			children = (
+				044329CB236809B500211E01 /* File.swift */,
+			);
+			path = webService;
+			sourceTree = "<group>";
+		};
+		0444FC5D2362D0F8008D1B8E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0444FC5E2362D117008D1B8E /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		047602C423428E800002EAA7 /* Event List */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +170,31 @@
 			path = "Event List";
 			sourceTree = "<group>";
 		};
+		04885E36235F89A900335D8F /* TrainerProfile */ = {
+			isa = PBXGroup;
+			children = (
+				04885E37235F89C700335D8F /* ProfileViewController.swift */,
+			);
+			path = TrainerProfile;
+			sourceTree = "<group>";
+		};
+		AA31D2DAE0F66D476BE06024 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				881AFD61B46EC870518BBDD8 /* Pods-Trainer.debug.xcconfig */,
+				FD7D820E4037147AC6AD775E /* Pods-Trainer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C89EDE397CD4E8B9A619AF4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AB66CB2FFC27A015CB3E6A6 /* Pods_Trainer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04354E022338F4B8007EDE2F /* Build configuration list for PBXNativeTarget "Trainer" */;
 			buildPhases = (
+				FE229352A138DDE2CD483616 /* [CP] Check Pods Manifest.lock */,
 				04354DEA2338F4B5007EDE2F /* Sources */,
 				04354DEB2338F4B5007EDE2F /* Frameworks */,
 				04354DEC2338F4B5007EDE2F /* Resources */,
+				7BBE2F434FA4396F7BE59CD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,19 +263,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7BBE2F434FA4396F7BE59CD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trainer/Pods-Trainer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trainer/Pods-Trainer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trainer/Pods-Trainer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE229352A138DDE2CD483616 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trainer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04354DEA2338F4B5007EDE2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				041ABEAA233A9A7100135F6F /* ViewControllerExtension.swift in Sources */,
+				0444FC5F2362D117008D1B8E /* Event.swift in Sources */,
 				04685596233C848500E1334A /* EventListViewController.swift in Sources */,
 				04354DF62338F4B5007EDE2F /* ViewController.swift in Sources */,
 				0435A35C233BF27F00F41B34 /* Enums.swift in Sources */,
 				047602C623428EB30002EAA7 /* EventTableViewCell.swift in Sources */,
 				0406C73D235ED8F7007C5030 /* ThankuViewController.swift in Sources */,
+				04885E38235F89C700335D8F /* ProfileViewController.swift in Sources */,
 				04354DF22338F4B5007EDE2F /* AppDelegate.swift in Sources */,
 				0406C739235E1E6A007C5030 /* SendMessageViewController.swift in Sources */,
+				044329CC236809B500211E01 /* File.swift in Sources */,
 				046E1B53234D1B68002FF1BC /* EventDetailViewController.swift in Sources */,
 				04354DF42338F4B5007EDE2F /* SceneDelegate.swift in Sources */,
 			);
@@ -358,15 +464,18 @@
 		};
 		04354E032338F4B8007EDE2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 881AFD61B46EC870518BBDD8 /* Pods-Trainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Trainer/Trainer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LYBQVME929;
 				INFOPLIST_FILE = Trainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nabeel.Trainer;
+				PRODUCT_BUNDLE_IDENTIFIER = bills.trainer.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -375,15 +484,18 @@
 		};
 		04354E042338F4B8007EDE2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7D820E4037147AC6AD775E /* Pods-Trainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Trainer/Trainer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LYBQVME929;
 				INFOPLIST_FILE = Trainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nabeel.Trainer;
+				PRODUCT_BUNDLE_IDENTIFIER = bills.trainer.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

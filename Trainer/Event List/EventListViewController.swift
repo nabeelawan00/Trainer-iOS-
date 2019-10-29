@@ -10,6 +10,8 @@ import UIKit
 
 class EventListViewController: UIViewController{
     
+    var rootResponse: RootEvent?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,7 @@ class EventListViewController: UIViewController{
 
 extension EventListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return rootResponse?.Eventdata?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -2,13 +2,13 @@
 //  ProfileViewController.swift
 //  Trainer
 //
-//  Created by Bills Mac on 21/10/2019.
+//  Created by Bills Mac on 23/10/2019.
 //  Copyright © 2019 Bills Mac. All rights reserved.
 //
 
 import UIKit
 
-class SendMessageViewController: UIViewController {
+class ProfileViewController: UIViewController {
     
     /*
        // MARK: - Navigation
@@ -20,17 +20,17 @@ class SendMessageViewController: UIViewController {
        }
        */
 
+    @IBOutlet weak var profileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func sendEmail(_ sender: UIButton) {
-     
-         let  vc = (storyboard?.instantiateViewController(withIdentifier:StoryBoardIds.ThankuStoryboardID.rawValue))!
-                     self.navigationController?.pushViewController(vc,animated:true)
         
+         // Do any additional setup after loading the view.
+        
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.cornerRadius = profileImage.bounds.width / 2
+
+       
     }
-    
+
 }

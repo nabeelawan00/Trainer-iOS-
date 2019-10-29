@@ -12,5 +12,6 @@ enum StoryBoardIds: String {
     case EventDetailStoryboardID
     case SendMessageStoryboardID
     case ThankuStoryboardID
+    case ProfileID
 
 }

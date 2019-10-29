@@ -26,11 +26,10 @@ class ThankuViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.isHidden = true
+        
     }
 
     @IBAction func actionThankYou(_ sender: Any) {
-        
-        self.navigationController?.popToRootViewController(animated: false)
-        
+       self.dismiss(animated: true, completion: nil)
     }
 }
