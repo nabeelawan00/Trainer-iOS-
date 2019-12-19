@@ -23,48 +23,48 @@ struct RootEvent : Codable {
 struct Event : Codable {
     
     let date_month: String?
-    let coach_repeatedstarttime: String = ""
-    let coach_repeatedendtime: String = ""
-    let repeated_description: String = ""
-    let repeated_fitness_studio: String = ""
-    let repeated_area: String = ""
-    let repeated_exact_description: String = ""
-    let repeated_times: String = ""
-    let repeated_weeks: String = ""
-    let repeated_week_date: String = ""
-    let repeated_space_customer: String = ""
-    let repeated_training_unit: String = ""
-    let coach_id: String = ""
-    let event_id: String = ""
-    let event_datetime: String = ""
+    let coach_repeatedstarttime: String?
+    let coach_repeatedendtime: String?
+    let repeated_description: String?
+    let repeated_fitness_studio: String?
+    let repeated_area: String?
+    let repeated_exact_description: String?
+    let repeated_times: String?
+    let repeated_weeks: String?
+    let repeated_week_date: String?
+    let repeated_space_customer: String?
+    let repeated_training_unit: String?
+    let coach_id: Int = -1
+    let event_id: Int = -1
+    let event_datetime: String?
     let coach_email: String = ""
-    let coach_password: String = ""
-    let coach_surname: String = ""
-    let coach_name: String = ""
-    let coach_lastname: String = ""
-    let coach_photo: String = ""
-    let coach_no_of_member: String = ""
-    let coach_fitnessstudio: String = ""
-    let coach_trainingday: String = ""
-    let coach_gymmembership: String = ""
-    let coach_short_description: String = ""
-    let coach_experience_year: String = ""
-    let coach_trainer_unit: String = ""
-    let coach_address: String = ""
-    let coach_repeatedweek: String = ""
-    let coach_trainer_description: String = ""
-    let coach_training_start_time: String = ""
-    let coach_training_end_time: String = ""
-    let coach_email_user: String = ""
-    let coach_residentialarea: String = ""
-    let coach_repeatedtitle: String = ""
-    let coach_repeatedevent: String = ""
-    let coach_status: String = ""
-    let last_login: String = ""
-    let admin_id: String = ""
-    let datetime: String = ""
-    let coach_zipcode: String = ""
-    let coach_country: String = ""
+    let coach_password: String?
+    let coach_surname: String?
+    let coach_name: String?
+    let coach_lastname: String?
+    let coach_photo: String?
+    let coach_no_of_member: String?
+    let coach_fitnessstudio: String?
+    let coach_trainingday: String?
+    let coach_gymmembership: String?
+    let coach_short_description: String?
+    let coach_experience_year: String?
+    let coach_trainer_unit: String?
+    let coach_address: String?
+    let coach_repeatedweek: String?
+    let coach_trainer_description: String?
+    let coach_training_start_time: String?
+    let coach_training_end_time: String?
+    let coach_email_user: String?
+    let coach_residentialarea: String?
+    let coach_repeatedtitle: String?
+    let coach_repeatedevent: String?
+    let coach_status: String?
+    let last_login: String?
+    let admin_id: Int = -1
+    let datetime: String?
+    let coach_zipcode: String?
+    let coach_country: String?
     
     enum CodingKeys: String, CodingKey {
         

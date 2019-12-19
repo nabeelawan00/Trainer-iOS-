@@ -33,10 +33,12 @@ class ViewController: UIViewController {
         
         let status = isInternetAvailable
         
-        if(status() == true){
+        if(status()==true){
             
         }else{
+            
             showOneButtonAlertView(title: "TRIOFIT",message: "Please check your internet connection")
+            
         }
         
     }
@@ -77,6 +79,7 @@ class ViewController: UIViewController {
     }
     
     //method for showing date picker
+    
     func showDatePicker(){
         //Formate Date
         datePicker.datePickerMode = .date
@@ -108,23 +111,20 @@ class ViewController: UIViewController {
         self.txtSelectDate.resignFirstResponder()
         //      self.view.endEditing(true)
     }
+    
     // button action to move Event list controller
     
     @IBAction func movetoNextScrenn(_ sender: UIButton) {
-        
-        callAPi(txtSelectDate: "2018-12-20", txtTime: "2018-12-20", txtMetroArea: "2018-12-20", txtFitnessStudio: "2018-12-20", txtMuscleGroup: "2018-12-20")
-        
-        //        if checkFieldsAreEmpty() {
-        //                    self.showOneButtonAlertView(title: "TRIOFIT", message: "Please fill all fields")
-        //                } else {
-        //        //            email and password check.
-        //        //            fildes are not empty so send the data to server.
-        //        //            make the server request and send data to senrver.
-        ////                    callAPi(email: nil, password: nil)
-        //
-        //
-        //
-        //                }
+                if checkFieldsAreEmpty() {
+                
+                    self.showOneButtonAlertView(title: "TRIOFIT", message: "Please fill all fields")
+                    
+                } else {
+                   
+                    callAPi(txtSelectDate: txtSelectDate.text, txtTime: txtTime.text, txtMetroArea: txtMetroArea.text, txtFitnessStudio:
+                        txtFitnessStudio.text, txtMuscleGroup: txtMuscleGroup.text)
+                    
+                       }
         
     }
 }
@@ -148,7 +148,7 @@ extension ViewController : UITextFieldDelegate{
 // Custom Function Extension.
 extension ViewController {
     
-    //    function check that is fields are empty return true is fields are empty.
+    //    function check that is fields are empty or not.
     func checkFieldsAreEmpty() -> Bool {
         if txtTime.text!.isEmpty || txtSelectDate.text!.isEmpty || txtMetroArea.text!.isEmpty || txtMuscleGroup.text!.isEmpty || txtFitnessStudio.text!.isEmpty{
             return true
@@ -158,48 +158,72 @@ extension ViewController {
     
     //    send data to server. calling API.
     //    this api is work for both login and sigup.
+    
     func callAPi(txtSelectDate: String?, txtTime: String?, txtMetroArea:String?, txtFitnessStudio: String?, txtMuscleGroup: String?) {
         
         //        self.delegate.showActivityIndicatory(uiView: self.view)
-        let completeUrl = URL(string: WebServices.skakuBaseURL + WebServices.event)
+        let completeUrl = WebServices.trainerBaseURL + WebServices.event
         var paremeters = ["":""]
-        let headers = ["Accept": "application/json",
-                      "ClientService": "trainer-client",
-                      "AuthKey": "ItIsfoRSeCurty!@).(@"
-        ]
+        
         
         if txtSelectDate != nil {
+            
             paremeters = ["date": txtSelectDate! ,
                           "beginning_time": txtTime! ,
                           "metropolition_area": txtMetroArea! ,
                           "fitnessstudio": txtFitnessStudio! ,
                           "muscle_group": txtMuscleGroup!]
         } else {
+            
             paremeters = ["date": txtSelectDate!,
                           "beginning_time": txtTime!,
                           "metropolition_area": txtMetroArea!,
                           "fitnessstudio": txtFitnessStudio!,
                           "muscle_group": txtMuscleGroup!]
         }
+        
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        WebServices.callApiWith(url: completeUrl!, method: .post, parameters: paremeters, headers: headers, withSucces: { [weak self] (data) in
+        
+        
+        WebServices.URLResponse(completeUrl, method: .post, parameters: paremeters, withSuccess: { [weak self] (data) in
             
             guard let strongSelf = self else {return}
             let decoder = JSONDecoder()
             do{
                 MBProgressHUD.hide(for: strongSelf.view , animated: true)
-                let response = try decoder.decode(RootEvent.self, from: data as! Data)
+                let response = try decoder.decode(RootEvent.self, from: data)
                 
-                self?.movetoNextScreen(with: response)
+                 self?.movetoNextScreen(with: response)
                 
             }catch let error{
                 print(error.localizedDescription)
                 MBProgressHUD.hide(for: strongSelf.view, animated: true)
             }
         }) { (error) in
-            print(error)
+            
             MBProgressHUD.hide(for: self.view, animated: true)
         }
+        
+//        WebServices.URLResponse(url: completeUrl!, method: .post, parameters: paremeters, headers: headers, withSucces: { [weak self] (data) in
+//
+//            guard let strongSelf = self else {return}
+//            let decoder = JSONDecoder()
+//            do{
+//                MBProgressHUD.hide(for: strongSelf.view , animated: true)
+//                let response = try decoder.decode(RootEvent.self, from: data as! Data)
+//
+//                self?.movetoNextScreen(with: response)
+//
+//            }catch let error{
+//                print(error.localizedDescription)
+//                MBProgressHUD.hide(for: strongSelf.view, animated: true)
+//            }
+//        }) { (error) in
+//            print(error)
+//            MBProgressHUD.hide(for: self.view, animated: true)
+//        }
+        
+        
     }
     
     func movetoNextScreen(with response: RootEvent) {

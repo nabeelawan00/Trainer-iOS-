@@ -43,7 +43,5 @@ class EventDetailViewController: UIViewController {
         let  vc = (storyboard?.instantiateViewController(withIdentifier:StoryBoardIds.SendMessageStoryboardID.rawValue))!
         self.navigationController?.pushViewController(vc,animated:true)
         
-        
-        
     }
 }

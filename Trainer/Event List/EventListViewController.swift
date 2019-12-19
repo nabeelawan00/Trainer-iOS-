@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class EventListViewController: UIViewController{
     
@@ -14,20 +15,33 @@ class EventListViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
     }
     
 }
 
 extension EventListViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rootResponse?.Eventdata?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventcell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventcell", for: indexPath) as! EventTableViewCell
+        
+        let event = rootResponse?.Eventdata?[indexPath.row]
+        cell.eventName.text = event?.coach_name
+        cell.eventClub.text = event?.coach_fitnessstudio
+        cell.eventDayType.text = event?.coach_trainer_unit
+        cell.eventStartEndTime.text = (event?.coach_training_end_time ?? "") + "  " + (event?.coach_training_start_time ?? "")
+        
+        let imageURL = URL(string: WebServices.imageBaseURL + (event?.coach_photo ?? ""))
+        cell.eventImage.sd_setImage(with: imageURL, completed: nil)
+        
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -37,5 +51,5 @@ extension EventListViewController: UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
-   
+    
 }

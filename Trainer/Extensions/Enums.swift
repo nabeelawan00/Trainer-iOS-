@@ -6,7 +6,7 @@
 //  Copyright © 2019 Bills Mac. All rights reserved.
 //
 
-/// Author:- Shimar bhai
+/// Author:- Nabeel Awan
 enum StoryBoardIds: String {
     case trainerLIstSID
     case EventDetailStoryboardID
