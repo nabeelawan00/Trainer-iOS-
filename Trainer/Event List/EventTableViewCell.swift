@@ -10,11 +10,12 @@ import UIKit
 
 class EventTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var eventDayType: UILabel!
     @IBOutlet weak var eventStartEndTime: UILabel!
+    @IBOutlet weak var eventDayType: UILabel!
     @IBOutlet weak var eventClub: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

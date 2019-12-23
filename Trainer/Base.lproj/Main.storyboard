@@ -186,7 +186,7 @@
                                             <outlet property="eventDayType" destination="NbX-2W-iWg" id="zQp-2P-u3e"/>
                                             <outlet property="eventImage" destination="fO4-Wo-ufk" id="hlz-89-Xzw"/>
                                             <outlet property="eventName" destination="2am-ar-DgS" id="sLt-BD-UGe"/>
-                                            <outlet property="eventStartTime" destination="jAX-HW-cwr" id="DLf-7h-jLF"/>
+                                            <outlet property="eventStartEndTime" destination="jAX-HW-cwr" id="MMW-ee-9Yp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
